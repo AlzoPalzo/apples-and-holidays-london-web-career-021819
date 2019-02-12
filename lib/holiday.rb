@@ -70,12 +70,11 @@ def all_supplies_in_holidays(holiday_hash)
     puts ("#{quarter}:")
     holiday.each do |name, equipment|
       cel_array = name.to_s.split("_")
-      cel_array.each do |word|
-        word.capitalize
-      end
-      celebration = cel_array.join(" ")
       supplies = equipment.join(", ")
-      puts ("  #{celebration}: #{supplies}")
+      cel_array.each do |word|
+        celebration = word.capitalize.join(" ")
+        puts ("  #{celebration}: #{supplies}")
+      end
     end
   end
 
