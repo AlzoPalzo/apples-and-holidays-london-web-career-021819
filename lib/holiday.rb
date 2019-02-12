@@ -71,7 +71,7 @@ def all_supplies_in_holidays(holiday_hash)
     holiday.each do |name, equipment|
       cel_array = name.to_s.split
       cel_array.each do |word|
-        word.upcase[0]
+        word.capitalize
       end
       celebration = cel_array.join(" ")
       supplies = equipment.join(", ")
