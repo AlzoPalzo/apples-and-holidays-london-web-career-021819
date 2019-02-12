@@ -61,6 +61,18 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
+  quarter = ""
+  celebration = ""
+  supplies = ""
+  holliday_hash.each do |season, holiday|
+    quarter = season.to_s.capitalize!
+    puts ("#{quarter}:")
+    holiday.each do |name, equipment|
+      celebration = name.to_s.capitalize
+      supplies = equipment.join(", ")
+      puts (" #{celebration}: supplies")
+    end
+  end
 
 end
 
