@@ -62,19 +62,18 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   quarter = ""
-  cel_array
+  cel_array = []
   celebration = ""
   supplies = ""
   holiday_hash.each do |season, holiday|
     quarter = season.to_s.capitalize!
     puts ("#{quarter}:")
     holiday.each do |name, equipment|
-      cel_array = name.to_s.split("_")
+      cel_array = name.to_s.split
       cel_array.each do |word|
         word.capitalize
       end
       celebration = cel_array.join(" ")
-      end
       supplies = equipment.join(", ")
       puts ("  #{celebration}: #{supplies}")
     end
